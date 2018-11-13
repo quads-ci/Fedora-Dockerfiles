@@ -1,4 +1,4 @@
-FROM docker.io/fedora MAINTAINER http://fedoraproject.org/wiki/Cloud # RUN label is for atomic cli, allows for ease of use LABEL RUN='docker run -d -p 5901:5901 -v /etc/machine-id:/etc/machine-id:ro $IMAGE'
+FROM fedora MAINTAINER http://fedoraproject.org/wiki/Cloud # RUN label is for atomic cli, allows for ease of use LABEL RUN='docker run -d -p 5901:5901 -v /etc/machine-id:/etc/machine-id:ro $IMAGE'
 # Install the appropriate software RUN dnf -y update && \
     dnf -y install firefox \
                    xorg-x11-twm \
